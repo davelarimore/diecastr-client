@@ -1,0 +1,12 @@
+language: node_js
+node_js: node
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: HJBKihR7Tk3A0QLC1Epe3wiAc27qUtEs0AxYRMcnnX2XjDefZ6LdU+kSZ5AYjHgwr246vmxmI/aT1OZPaw//5Ddqi0HHgxde/+59DfFIP1+g7xTbZHQ0Z5cyJUJ9Pl3s9zVB9Ycs1VEiTtw/vPwEXvQqabvuLcC007RZxeH62flcfQeZ7/HKPo9egkgMEdGK2Mi1bhnD5CxzEeOXvLmmd4bgn1bA3TwfEQ8zEFcgbjIkedXOcUh1U9uM3Yetcjh83l9Hai0ZveWOiTqHnx4FqLlCPZYAzJ15Jf7aT0UOgjU2Zi53EDL1zobpDHElw512n+pNWHKAzMTpKagPv+u4MKnADph0DNGcDan5ka7Zd2Hh21Pua/V+2OvOnDHhPiYueyBYFLbQK7GEwUyXWP1qT7diTd3w9YTs0P0lrr0L6VzRpClmj0McSR9ZqoCvp6mBfhTHgJR/zgeBy8wBTsuvb3Acz3FhY8ehWJ60mRhmrPvEwIlzTFgHtUtHoKnwspyhSC7f9d2H0IV5qdXQ3OMV6D45YjOac74RaU9WJP+97VmLm3RtUKW4kfxICxCQ6vpBYNx+IEDiPt2orVJumm94sY6JizUnGWf/wYEVYN30OWyRQgvH9iR/qqMV6Ikz4wvbCFTKw4oXvGPP6ke9jlHYHRAaGWPAlRs61kb/eFn+XsI=
+  app: murmuring-brushlands-94036
+  on:
+    repo: davelarimore/diecastr-client
