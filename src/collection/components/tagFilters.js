@@ -18,7 +18,7 @@ const styles = {
     }
 }
 
-function TagFilters(props) {
+export const TagFilters = (props) => {
     let links = [];
     if (props.tags.length > 0) {
     links = props.tags.map((link, index) =>

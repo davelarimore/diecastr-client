@@ -75,7 +75,7 @@ const styles = {
     }
 }
 
-function ModelList(props) {
+export const ModelList = (props) => {
 
     const models = props.models.map((model, index) =>
         <a style={styles.thumbnail} href="./model" key={index}>

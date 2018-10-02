@@ -37,7 +37,7 @@ const styles = {
     }
 }
 
-function Header() {
+export const Header = () => {
     return (
         <header style={styles.header}>
             <a href="./"><div style={styles.logo}></div></a>

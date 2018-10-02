@@ -9,7 +9,7 @@ const styles = {
     }
 }
 
-function ModelHeader(props) {
+export const ModelHeader = (props) => {
     return (
         <section>
             <h1 style={styles.h1}>{props.model.title}</h1>

@@ -27,7 +27,7 @@ const styles = {
     }
 }
 
-const DefaultLayout = ({ component: Component, ...rest }) => {
+export const DefaultLayout = ({ component: Component, ...rest }) => {
     return (
         <Route {...rest} render={matchProps => (
             <div style={styles.container}>

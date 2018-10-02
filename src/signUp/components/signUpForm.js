@@ -33,7 +33,7 @@ const styles = {
     }
 }
 
-function SignUpForm() {
+export const SignUpForm = () => {
     return (
         <section>
             <h1>Sign Up</h1>

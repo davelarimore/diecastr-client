@@ -63,7 +63,7 @@ const styles = {
     }
 }
 
-function PublicCollectionsList(props) {
+export const PublicCollectionsList = (props) => {
 
     const collections = props.users.map((user, index) =>
         <a style={styles.thumbnail} href="./collection" key={index}>

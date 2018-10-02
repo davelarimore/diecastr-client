@@ -16,7 +16,7 @@ const styles = {
     },
 }
 
-function ViewAllCollectionsLink() {
+export const ViewAllCollectionsLink = () => {
     return (
         <a style={styles.button} href="./community">View All</a>
     );

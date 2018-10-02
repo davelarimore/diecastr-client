@@ -28,7 +28,7 @@ const styles = {
     }
 }
 
-class FilterMenu extends React.Component {
+export class FilterMenu extends React.Component {
     constructor() {
         super();
         this.state = {

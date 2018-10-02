@@ -13,7 +13,7 @@ const styles = {
     }
 }
 
-function Footer() {
+export const Footer = () => {
     return (
         <footer style={styles.footer} role="contentinfo">Footer</footer>
     );

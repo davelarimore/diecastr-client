@@ -13,7 +13,7 @@ const styles = {
     }
 }
 
-    function StatusFilters() {
+export const StatusFilters = () => {
         const statusFilters = ['For Sale', 'Not For Sale', 'Sold', 'Wanted'];
 
         const links = statusFilters.map((link, index) =>

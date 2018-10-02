@@ -18,7 +18,7 @@ const styles = {
         marginBottom: 30,
     }
 }
-function OnboardingSection() {
+export const OnboardingSection = () => {
     return (
         <section style={styles.section}>
             <h3>Manage your model collection and share it with others.</h3>

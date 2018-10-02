@@ -20,7 +20,7 @@ import Radium from 'radium';
 //     },
 // }
 
-function AccountHeader() {
+export const AccountHeader = () => {
     return (
         <section>
             <h1>My Account</h1>

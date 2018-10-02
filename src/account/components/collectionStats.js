@@ -20,7 +20,7 @@ import Radium from 'radium';
 //     },
 // }
 
-function CollectionStats(props) {
+export const CollectionStats = (props) => {
 
     const estTotal = props.models.reduce((prev, cur) => prev + cur.estValue, 0);
 

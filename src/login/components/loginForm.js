@@ -35,8 +35,7 @@ const styles = {
         margin: '0 15px 15px 0',
     }
 }
-
-function LoginForm() {
+export const LoginForm = () => {
     return (
         <section>
             <h1>Login</h1>

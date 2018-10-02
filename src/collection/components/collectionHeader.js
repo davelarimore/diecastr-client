@@ -21,7 +21,7 @@ const styles = {
     },
 }
 
-function CollectionHeader(props) {
+export const CollectionHeader = (props) => {
     return (
         <section>
             <h1>My Collection</h1>

@@ -64,8 +64,7 @@ const styles = {
         }
     }
 }
-
-function ModelForm(props) {
+export const ModelForm = (props) => {
     return (
         <section>
             <form style={styles.form}>
@@ -156,5 +155,6 @@ function ModelForm(props) {
         </section >
     );
 }
+
 
 export default Radium(ModelForm);

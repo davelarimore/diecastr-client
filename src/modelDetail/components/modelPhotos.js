@@ -52,7 +52,7 @@ const styles = {
     }
 }
 
-function ModelPhotos(props) {
+export const ModelPhotos = (props) => {
 
     const photos = props.model.photos.map((photo, index) => 
         <div style={styles.thumbnail} key={index}>
