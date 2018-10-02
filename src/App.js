@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import DefaultLayout from './common/components/defaultLayout';
+import Home from './home';
+import Login from './login';
+import SignUp from './signUp';
+import Collection from './collection';
+import ModelDetail from './modelDetail';
+import Community from './community';
+import Account from './account';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <React.Fragment>
+        <DefaultLayout exact path="/" component={Home} />
+        <DefaultLayout exact path="/login" component={Login} />
+        <DefaultLayout exact path="/sign-up" component={SignUp} />
+        <DefaultLayout exact path="/collection" component={Collection} />
+        <DefaultLayout exact path="/model" component={ModelDetail} />
+        <DefaultLayout exact path="/community" component={Community} />
+        <DefaultLayout exact path="/account" component={Account} />
+      </React.Fragment>
+    )
   }
 }
 
 export default App;
-
-
-// import store
-// import routes to primary components
