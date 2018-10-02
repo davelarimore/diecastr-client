@@ -8,7 +8,7 @@ import ModelDetail from './modelDetail';
 import Community from './community';
 import Account from './account';
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <React.Fragment>
