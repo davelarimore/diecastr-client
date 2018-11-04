@@ -1,52 +1,62 @@
+import { getCommunityCollections } from './api/collections'
+
 // constants
-const LOAD = 'my-app/widgets/LOAD';
-const CREATE = 'my-app/widgets/CREATE';
-const UPDATE = 'my-app/widgets/UPDATE';
-const REMOVE = 'my-app/widgets/REMOVE';
+export const COMMUNITY_LOADING = 'COMMUNITY_LOADING';
+export const COMMUNITY_ERROR = 'COMMUNITY_ERROR';
+export const COMMUNITY_ADD = 'COMMUNITY_ADD';
 
 // default state
 const defaultState = {
-    users: [{
-        name: 'carguy1980',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-    },
-    {
-        name: 'fastdude',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-    },
-    {
-        name: 'tinytin',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-    },
-    {
-        name: 'zoomer',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-    }
-    ]
+    collections: [
+        {
+            userId: '',
+        }
+    ],
 }
-
 
 // reducer
 export default function reducer(state = defaultState, action = {}) {
     switch (action.type) {
-        // do reducer stuff
+        case COMMUNITY_LOADING:
+            return state = {
+                ...state,
+                loading: action.loading
+            }
+        case COMMUNITY_ERROR:
+            return state = {
+                ...state,
+                error: action.error
+            }
+        case COMMUNITY_ADD:
+            return state = {
+                ...state,
+                collections: action.collections
+            }
         default: return state;
     }
 }
 
 // actions
-export function loadWidgets() {
-    return { type: LOAD };
+export function setLoading(loading) {
+    return { type: COMMUNITY_LOADING, loading }
+}
+export function setError(error) {
+    return { type: COMMUNITY_ERROR, error }
+}
+export function addCollections(collections) {
+    return { type: COMMUNITY_ADD, collections }
 }
 
-export function createWidget(widget) {
-    return { type: CREATE, widget };
-}
-
-export function updateWidget(widget) {
-    return { type: UPDATE, widget };
-}
-
-export function removeWidget(widget) {
-    return { type: REMOVE, widget };
+// thunks
+export const getCommunity = () => dispatch => {
+    dispatch(setLoading(true));
+    getCommunityCollections()
+        .then(collections => {
+            dispatch(setLoading(false));
+            dispatch(addCollections(collections))
+        })
+        .catch(err => {
+            dispatch(setLoading(false));
+            dispatch(setError(err))
+        })
 }

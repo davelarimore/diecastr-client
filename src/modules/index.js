@@ -1,18 +1,22 @@
 import { combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form';
 import home from './home';
-import signUp from './signUp';
-import login from './login';
 import community from './community';
 import collection from './collection';
 import modelDetail from './modelDetail';
+import addModel from './addModel';
 import account from './account';
+import auth from './auth';
+import protectedData from './protected-data';
 
 export default combineReducers({
     home,
-    signUp,
-    login,
     community,
     collection,
     modelDetail,
-    account
+    addModel,
+    account,
+    auth,
+    protectedData,
+    form: formReducer,
 })

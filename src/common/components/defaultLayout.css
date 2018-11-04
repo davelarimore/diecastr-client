@@ -1,0 +1,21 @@
+ /* Radium would not render these media queries... */
+
+ .defaultContainer {
+     display: flex;
+     justify-content: center;
+ }
+
+ .defaultMain {
+     flex: 1 1;
+     position: relative;
+     padding-top: 140px;
+     max-width: 960px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ @media screen and (max-width: 1000px) {
+     .defaultMain {
+         padding: 120px 20px 0 20px;
+     }
+ }

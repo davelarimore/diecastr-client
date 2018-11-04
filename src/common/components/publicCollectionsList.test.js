@@ -2,25 +2,24 @@ import React from 'react';
 import { PublicCollectionsList } from './publicCollectionsList';
 import { shallow, mount } from 'enzyme';
 
-const users = [
+const collections = [
     {
-        name: 'carguy1980',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
+        _id: '1234',
+        userId: {
+            userName: 'test',
+            avatarUrl: 'test',
+        },
     },
     {
-        name: 'fastdude',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
+        _id: '5678',
+        userId: {
+            userName: 'test2',
+            avatarUrl: 'test2',
+        },
     },
-    {
-        name: 'tinytin',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-    },
-    {
-        name: 'zoomer',
-        image: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-    }
+  
     ]
 
 it('Renders without crashing', () => {
-    shallow(<PublicCollectionsList users={users}/>);
+    shallow(<PublicCollectionsList collections={collections}/>);
 });

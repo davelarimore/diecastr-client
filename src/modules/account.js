@@ -1,73 +1,85 @@
+import { getUser, updateUser } from './api/users'
+
 // constants
-const LOAD = 'my-app/widgets/LOAD';
-const CREATE = 'my-app/widgets/CREATE';
-const UPDATE = 'my-app/widgets/UPDATE';
-const REMOVE = 'my-app/widgets/REMOVE';
+export const ACCOUNT_LOADING = 'ACCOUNT_LOADING';
+export const ACCOUNT_ERROR = 'ACCOUNT_ERROR';
+export const ACCOUNT_ADD = 'ACCOUNT_ADD';
+export const ACCOUNT_UPDATE = 'ACCOUNT_UPDATE';
 
-// default state
 const defaultState = {
-    models: [
-        {
-            title: '1980 Camaro',
-            modelMfg: 'Hot Wheels',
-            scale: '1:64',
-            estValue: 30.00,
-            img1Url: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-        },
-        {
-            title: '1981 Camaro',
-            modelMfg: 'Hot Wheels',
-            scale: '1:64',
-            estValue: 30.00,
-            img1Url: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-        },
-        {
-            title: '1982 Camaro',
-            modelMfg: 'Hot Wheels',
-            scale: '1:64',
-            estValue: 30.00,
-            img1Url: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-        },
-        {
-            title: '1983 Camaro',
-            modelMfg: 'Hot Wheels',
-            scale: '1:64',
-            estValue: 30.00,
-            img1Url: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-        },
-        {
-            title: '1984 Camaro',
-            modelMfg: 'Hot Wheels',
-            scale: '1:64',
-            estValue: 30.00,
-            img1Url: 'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-        }
-    ],
-    tags: ['Rally', 'Livery']
+    user: {
+        userName: '',
+        email: '',
+        avatarUrl: '',
+        collections: [],
+        models: [],
+    }
 }
-
 
 // reducer
 export default function reducer(state = defaultState, action = {}) {
     switch (action.type) {
-        // do reducer stuff
+        case ACCOUNT_LOADING:
+            return state = {
+                ...state,
+                loading: action.loading
+            }
+        case ACCOUNT_ERROR:
+            return state = {
+                ...state,
+                error: action.error
+            }
+        case ACCOUNT_ADD:
+            return state = {
+                ...state,
+                user: action.user
+            }
+        case ACCOUNT_UPDATE:
+            return state = {
+                ...state,
+                user: action.user
+            }
         default: return state;
     }
 }
 
 // actions
-export function loadWidgets() {
-    return { type: LOAD };
+export function setLoading(loading) {
+    return { type: ACCOUNT_LOADING, loading }
+}
+export function setError(error) {
+    return { type: ACCOUNT_ERROR, error }
+}
+export function addUser(user) {
+    return { type: ACCOUNT_ADD, user }
+}
+export function updateUserInfo(user) {
+    return { type: ACCOUNT_UPDATE, user }
 }
 
-export function createWidget(widget) {
-    return { type: CREATE, widget };
+// thunks
+export const getAccount = () => (dispatch, getState) => {
+    dispatch(setLoading(true));
+    getUser()
+        .then(user => {
+            dispatch(setLoading(false));
+            dispatch(addUser(user))
+        })
+        .catch(err => {
+            dispatch(setLoading(false));
+            dispatch(setError(err))
+        })
 }
 
-export function updateWidget(widget) {
-    return { type: UPDATE, widget };
-}
-
-export function removeWidget(widget) {
-    return { type: REMOVE, widget };
+export const updateUserData = (userData) => (dispatch, getState) => {
+    dispatch(setLoading(true));
+    updateUser(userData)
+        .then(user => {
+            dispatch(setLoading(false));
+            dispatch(addUser(user))
+        })
+        .catch(err => {
+            dispatch(setLoading(false));
+            dispatch(setError(err))
+        })
 }

@@ -1,0 +1,16 @@
+ /* Radium would not render these media queries... */
+
+ .homeMain {
+     flex: 1 1;
+     position: relative;
+     padding: 10px 0px;
+     max-width: 960px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ @media screen and (max-width: 1000px) {
+     .homeMain {
+         padding: 10px 20px;
+     }
+ }

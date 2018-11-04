@@ -1,4 +1,4 @@
 export default {
-    breakpointLarge: '@media screen and (max-width: 768px)',
-    breakpointSmall: '@media screen and (max-width: 420px)'
+    breakpointLarge: '@media screen and (maxWidth: 767px)',
+    breakpointSmall: '@media screen and (maxWidth: 420px)'
 };

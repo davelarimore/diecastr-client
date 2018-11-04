@@ -1,40 +1,21 @@
 import React from 'react';
 import Radium from 'radium';
 import { Route } from 'react-router-dom';
-import Header from './header';
+import Header from './header/headerContainer';
 import Footer from './footer';
-// import colors from '../../common/colors';
-// import mediaQueries from '../../common/mediaQueries';
+import AddModelButton from './addModelButton';
 
-const styles = {
-    container: {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        overflow: 'auto',
-        minHeight: '100%',
-        height: '100%',
-        // position: 'relative',
-    },
-    main: {
-        paddingTop: 100,
-        paddingBottom: 50,
-        maxWidth: 960,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-    }
-}
+import './defaultLayout.css'
 
 export const DefaultLayout = ({ component: Component, ...rest }) => {
     return (
         <Route {...rest} render={matchProps => (
-            <div style={styles.container}>
+            <div className='defaultContainer'>
                 <Header />
-                <main style={styles.main}>
+                <main className='defaultMain'>
                     <Component {...matchProps} />
                 </main>
+                {rest.addModelButton ? <AddModelButton /> : null}
                 <Footer />
             </div>
         )} />

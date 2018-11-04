@@ -1,60 +1,115 @@
+import { getModelDetail as getModel } from './api/models'
+import { updateModelData as updateModel } from './api/models'
+import { deleteModel as deleteMyModel } from './api/models'
+
 // constants
-const LOAD = 'my-app/widgets/LOAD';
-const CREATE = 'my-app/widgets/CREATE';
-const UPDATE = 'my-app/widgets/UPDATE';
-const REMOVE = 'my-app/widgets/REMOVE';
+export const MODEL_LOADING = 'MODEL_LOADING';
+export const MODEL_ERROR = 'MODEL_ERROR';
+export const MODEL_ADD = 'MODEL_ADD';
+export const MODEL_SAVE = 'MODEL_SAVE';
+export const SET_DELETED = 'SET_DELETED';
+export const UNSET_DELETED = 'UNSET_DELETED';
 
 // default state
 const defaultState = {
-    users: ['carguy1980', 'fastdude', 'tinytin', 'zoomer'],
-    models: [
-        {
-            title: '1980 Camaro',
-            modelMfg: 'Hot Wheels',
-            scale: '1:64',
-            color: 'White',
-            condition: 'Mint',
-            packaging: 'Mint Card',
-            mfgYear: '2012',
-            purchaseYear: '2013',
-            purchasePrice: '14.99',
-            estValue: '30.00',
-            quantity: '1',
-            status: 'Not for sale',
-            notes: 'Lorem ipsum dolor sit amet',
-            tags: ['rally', 'livery'],
-            photos: [
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-            ],
-        }
-    ]
+    deleted: false,
+    model: {},
 }
-
 
 // reducer
 export default function reducer(state = defaultState, action = {}) {
     switch (action.type) {
-        // do reducer stuff
+        case MODEL_LOADING:
+            return state = {
+                ...state,
+                loading: action.loading
+            }
+        case MODEL_ERROR:
+            return state = {
+                ...state,
+                error: action.error
+            }
+        case MODEL_ADD:
+            return state = {
+                ...state,
+                model: action.model
+            }
+        case MODEL_SAVE:
+            return state = {
+                ...state,
+                model: action.model
+            }
+        case SET_DELETED:
+            return state = {
+                ...state,
+                deleted: true
+            }
+        case UNSET_DELETED:
+            return state = {
+                ...state,
+                deleted: false
+            }
         default: return state;
     }
 }
 
 // actions
-export function loadWidgets() {
-    return { type: LOAD };
+export function setLoading(loading) {
+    return { type: MODEL_LOADING, loading }
+}
+export function setError(error) {
+    return { type: MODEL_ERROR, error }
+}
+export function addModel(model) {
+    return { type: MODEL_ADD, model }
+}
+export function saveModel(model) {
+    return { type: MODEL_SAVE, model }
+}
+export function setDeleted() {
+    return { type: SET_DELETED }
+}
+export function unsetDeleted() {
+    return { type: UNSET_DELETED }
 }
 
-export function createWidget(widget) {
-    return { type: CREATE, widget };
+// thunks
+export const getModelDetail = (id) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+    dispatch(setLoading(true));
+    getModel(authToken, id)
+        .then(model => {
+            dispatch(setLoading(false));
+            dispatch(addModel(model));
+        })
+        .catch(err => {
+            dispatch(setLoading(false));
+            dispatch(setError(err));
+        })
 }
 
-export function updateWidget(widget) {
-    return { type: UPDATE, widget };
+export const updateModelData = (modelData) => (dispatch, getState) => {
+    dispatch(setLoading(true));
+    updateModel(modelData)
+        .then(model => {
+            dispatch(setLoading(false));
+            dispatch(saveModel(model));
+        })
+        .catch(err => {
+            dispatch(setLoading(false));
+            dispatch(setError(err));
+        })
 }
 
-export function removeWidget(widget) {
-    return { type: REMOVE, widget };
+export const deleteModel = (modelId) => (dispatch, getState) => {
+    dispatch(setLoading(true));
+    dispatch(setDeleted());
+    deleteMyModel(modelId)
+        .then(() => {            
+            dispatch(setLoading(false));
+        })
+        .catch(err => {
+            dispatch(setLoading(false));
+            dispatch(setError(err));
+        })
 }
