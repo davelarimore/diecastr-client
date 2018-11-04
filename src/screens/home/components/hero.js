@@ -14,12 +14,9 @@ const styles = {
         backgroundPosition: 'center',
         padding: '80px 15px',
         '@media screen and (max-width: 767px)': {
-            backgroundSize: 'contain',
             padding: '30px 15px',
         },
         '@media screen and (max-width: 420px)': {
-            backgroundSize: 'cover',
-            backgroundPosition: 'right',
             padding: '30px 15px',
         }
     },
@@ -34,9 +31,7 @@ const styles = {
         padding: '40px',
         marginLeft: 'auto',
         marginRight: 'auto',
-        // border: '1px solid rgba(0,0,0,0)',
         borderRadius: 8,
-        // backgroundColor: 'rgba(27,20,100, 0.8)',
         '@media screen and (max-width: 767px)': {
             width: '80%',
             padding: 30,
@@ -61,7 +56,6 @@ const styles = {
         color: colors.darkText,
         padding: '7px 25px',
         margin: '0 15px',
-        // border: '1px solid rgba(0,0,0,0)',
         borderRadius: 8,
         backgroundColor: '#FFF',
         ':hover': {

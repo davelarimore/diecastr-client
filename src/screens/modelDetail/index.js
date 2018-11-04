@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import requiresLogin from '../../common/components/requiresLogin';
 import ModelPhotos from './components/modelPhotos';
 import ModelForm from './components/modelForm';
 import { getModelDetail, unsetDeleted } from '../../modules/modelDetail';
@@ -52,4 +51,4 @@ const mapStateToProps = (state) => ({
     deleted: state.modelDetail.deleted
 })
 
-export default requiresLogin()(connect(mapStateToProps, mapDispatchToProps)(ModelDetailContainer))
+export default connect(mapStateToProps, mapDispatchToProps)(ModelDetailContainer)
