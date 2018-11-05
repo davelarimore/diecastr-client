@@ -52,7 +52,7 @@
      padding: 0;
  }
 
- @media screen and (max-width: 420px) {
+ @media screen and (max-width: 520px) {
      .modelForm {
          margin-right: 0;
      }

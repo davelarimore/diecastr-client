@@ -18,10 +18,11 @@ const styles = {
         fontSize: 14,
     },
     select: {
+        fontFamily: "'Lato', sans-serif",
+        fontWeight: 700,
+        fontSize: 18,
         width: '100%',
         height: 40,
-        fontSize: 18,
-        fontWeight: 700,
         lineHeight: 40,
         border: 0,
         borderRadius: 0,

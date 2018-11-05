@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import ModelPhotos from './components/modelPhotos';
 import ModelForm from './components/modelForm';
+import Loading from '../../common/components/loading';
 import { getModelDetail, unsetDeleted } from '../../modules/modelDetail';
 import { unsetNew } from '../../modules/addModel';
 
@@ -32,7 +33,7 @@ class ModelDetailContainer extends React.Component {
             </React.Fragment>
         )
         const loadingScreen = (
-            <p>Loading</p>
+            <Loading message='Loading...' />
         )
         return loading ? (loadingScreen) : (modelDetailScreen)
     }

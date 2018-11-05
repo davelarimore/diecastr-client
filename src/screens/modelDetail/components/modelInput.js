@@ -37,10 +37,11 @@ const styles = {
         },
     },
     input: {
+        fontFamily: "'Lato', sans-serif",
+        fontWeight: 700,
+        fontSize: 18,
         width: '100%',
         height: 40,
-        fontSize: 18,
-        fontWeight: 700,
         lineHeight: 40,
         padding: 0,
         // textIndent: 8,

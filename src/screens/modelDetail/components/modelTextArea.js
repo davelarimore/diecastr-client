@@ -1,6 +1,5 @@
 import React from 'react';
 import Radium from 'radium';
-// import colors from '../../../common/colors';
 
 const styles = {
     field: {
@@ -19,9 +18,10 @@ const styles = {
         fontSize: 14,
     },
     textArea: {
-        width: '100%',
-        fontSize: 18,
+        fontFamily: "'Lato', sans-serif",
         fontWeight: 700,
+        fontSize: 18,
+        width: '100%',
         padding: '8px 0',
         resize: 'none',
         border: 'none',

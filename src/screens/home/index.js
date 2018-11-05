@@ -1,18 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PublicCollectionsList from '../../common/components/publicCollectionsList';
+import Loading from '../../common/components/loading';
 import { getCommunity } from '../../modules/home';
 
 class Home extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
     componentDidMount() {
         this.props.getCommunity();
     }
 
     render() {
-
         const { collections, loading } = this.props;
         const homeScreen = (
             <React.Fragment>
@@ -20,14 +17,9 @@ class Home extends React.Component {
             </React.Fragment>
         )
         const loadingScreen = (
-            <p>Loading</p>
+            <Loading message='Loading...' />
         )
-
-        // if (this.props.loggedIn) {
-        //     return <Redirect to="/collection" />;
-        // } else {
-            return loading ? (loadingScreen) : (homeScreen)
-        // }
+        return loading ? (loadingScreen) : (homeScreen)
     }
 }
 
@@ -42,4 +34,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
-

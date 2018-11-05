@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PublicCollectionsList from '../../common/components/publicCollectionsList';
+import Loading from '../../common/components/loading';
 import { getCommunity } from '../../modules/community';
 
 class Community extends React.Component {
@@ -16,7 +17,7 @@ class Community extends React.Component {
             </React.Fragment>
         )
         const loadingScreen = (
-            <p>Loading</p>
+            <Loading message='Loading...' />
         )
         return loading ? (loadingScreen) : (communityScreen)
     }

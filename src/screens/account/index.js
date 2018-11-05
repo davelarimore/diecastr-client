@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import AccountInfo from './components/accountInfo'
 import CollectionStats from './components/collectionStats';
 import requiresLogin from '../../common/components/requiresLogin';
+import Loading from '../../common/components/loading';
 import { getAccount } from '../../modules/account';
 
 class AccountContainer extends React.Component {
@@ -16,11 +17,10 @@ class AccountContainer extends React.Component {
             <React.Fragment>
                 <AccountInfo user={user} />
                 <CollectionStats models={user.models} />
-                {/* <CollectionCharts models={user.models} /> */}
             </React.Fragment>
         )
         const loadingScreen = (
-            <p>Loading</p>
+            <Loading message='Loading...' />
         )
         return loading ? (loadingScreen) : (accountDetailScreen)
     }

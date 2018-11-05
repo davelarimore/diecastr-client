@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import CollectionHeader from './components/collectionHeader';
 import ModelList from './components/modelList';
 import Pagination from './components/pagination';
+import Loading from '../../common/components/loading';
 import NoModels from './components/noModels';
 import {
     FOR_SALE,
@@ -55,7 +56,7 @@ class CollectionContainer extends React.Component {
             </React.Fragment>
         )
         const loadingScreen = (
-            <p>Loading</p>
+            <Loading message='Loading...' />
         )
         return loading ? (loadingScreen) : (collectionList)
     }

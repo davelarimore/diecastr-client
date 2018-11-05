@@ -17,31 +17,31 @@ const defaultState = {
 }
 
 // reducer
-export default function reducer(state = defaultState, action = {}) {
-    switch (action.type) {
-        case ACCOUNT_LOADING:
-            return state = {
-                ...state,
-                loading: action.loading
-            }
-        case ACCOUNT_ERROR:
-            return state = {
-                ...state,
-                error: action.error
-            }
-        case ACCOUNT_ADD:
-            return state = {
-                ...state,
-                user: action.user
-            }
-        case ACCOUNT_UPDATE:
-            return state = {
-                ...state,
-                user: action.user
-            }
-        default: return state;
-    }
-}
+// export default function reducer(state = defaultState, action = {}) {
+//     switch (action.type) {
+//         case ACCOUNT_LOADING:
+//             return state = {
+//                 ...state,
+//                 loading: action.loading
+//             }
+//         case ACCOUNT_ERROR:
+//             return state = {
+//                 ...state,
+//                 error: action.error
+//             }
+//         case ACCOUNT_ADD:
+//             return state = {
+//                 ...state,
+//                 user: action.user
+//             }
+//         case ACCOUNT_UPDATE:
+//             return state = {
+//                 ...state,
+//                 user: action.user
+//             }
+//         default: return state;
+//     }
+// }
 
 // actions
 export function setLoading(loading) {
