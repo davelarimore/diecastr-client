@@ -136,9 +136,9 @@ export class ModelSelect extends React.Component {
             <div style={styles.field} className="form-input">
                 <label style={styles.label} htmlFor={this.props.input.name}>
                     {this.props.label}
-                    {error}
-                    {warning}
                 </label>
+                {error}
+                {warning}
                 <hr style={styles.hr}></hr>
                 {this.props.readOnly ? input : select}
             </div>

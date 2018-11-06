@@ -26,9 +26,6 @@ export const registerUser = user => dispatch => {
         });
 };
 
-
-
-
 export const getUser = () => {
     const url = `${API_BASE_URL}/users`;
     return authorizedRequest(url, 'GET')

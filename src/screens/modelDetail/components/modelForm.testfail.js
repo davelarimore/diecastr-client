@@ -30,5 +30,5 @@ const models = [
 
 
 it('Renders without crashing', () => {
-    shallow(<ModelForm model={models}/>);
+    shallow(<ModelForm model={models} handleSubmit={() => { }} />);
 });

@@ -1,7 +1,7 @@
 import React from 'react';
-import { LoginForm } from './loginForm';
+import { UploadPhotoForm } from './uploadPhotoForm';
 import { shallow, mount } from 'enzyme';
 
 it('Renders without crashing', () => {
-    shallow(<LoginForm />);
+    shallow(<UploadPhotoForm photoKey='photoUrl1' />);
 });

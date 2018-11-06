@@ -80,7 +80,6 @@ export class ModelTextArea extends React.Component {
             <div style={styles.field} className="form-input">
                 <label style={styles.label} htmlFor={this.props.input.name}>
                     {this.props.label}
-
                 </label>
                 {error}
                 {warning}

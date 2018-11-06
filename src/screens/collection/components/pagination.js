@@ -5,7 +5,6 @@ import { getPublicCollectionModels } from '../../../modules/collection';
 // import { getCollectionModels } from '../../../modules/collection';
 import colors from '../../../common/colors';
 import { getRangeWithDots } from '../../../utils/helpers'
-// import mediaQueries from '../../../common/mediaQueries';
 
 const styles = {
     ul: {

@@ -1,5 +1,5 @@
 import {
-    ACCOUNT_LOADING, 
+    ACCOUNT_LOADING,
     setLoading,
     ACCOUNT_ERROR,
     setError,

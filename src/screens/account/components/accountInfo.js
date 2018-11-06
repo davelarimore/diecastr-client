@@ -3,7 +3,6 @@ import Radium from 'radium';
 import AccountInfoForm from './accountInfoForm'
 import UploadAvatarForm from './uploadAvatarForm';
 import colors from '../../../common/colors';
-// import colors from '../../../common/colors';
 
 const styles = {
     container: {

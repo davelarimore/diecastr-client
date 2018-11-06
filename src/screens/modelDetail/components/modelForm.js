@@ -141,7 +141,6 @@ class ModelFormComponent extends React.Component {
                             name="scale"
                             id="scale"
                             autoComplete='on'
-                            validate={[required, nonEmpty]}
                             props={readOnly}
                         />
                         <Field

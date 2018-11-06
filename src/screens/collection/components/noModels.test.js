@@ -1,7 +1,8 @@
 import React from 'react';
-import { SignUpForm } from './signUpForm';
+import { NoModels } from './noModels';
 import { shallow, mount } from 'enzyme';
 
+
 it('Renders without crashing', () => {
-    shallow(<SignUpForm />);
+    shallow(<NoModels />);
 });
