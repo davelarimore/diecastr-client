@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { login } from '../../modules/auth';
+import { DemoInfo } from './components/demoInfo';
 import LoginForm from './components/loginForm'
 
 const LoginContainer = (props) => {
@@ -16,6 +17,7 @@ return (
         <h1>Log in to Diecastr</h1>
         <LoginForm login={props.login}/>
         <Link to="/sign-up">Sign Up</Link>
+        <DemoInfo />
     </section>
 );
 }

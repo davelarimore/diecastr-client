@@ -59,7 +59,6 @@ const styles = {
         fontWeight: 700,
         lineHeight: 40,
         padding: 0,
-        // textIndent: 8,
         border: 'none',
         outline: 'none',
         backgroundColor: 'rgba(0,0,0,0)',
@@ -74,9 +73,10 @@ const styles = {
         display: 'inline-block',
         flex: '1 1 100%',
         color: '#888',
+        backgroundColor: '#888',
         margin: '0',
-        borderStyle: 'solid',
-        borderWidth: 1,
+        border: 'none',
+        height: 1,
     }
 }
 
@@ -136,9 +136,9 @@ export class ModelSelect extends React.Component {
             <div style={styles.field} className="form-input">
                 <label style={styles.label} htmlFor={this.props.input.name}>
                     {this.props.label}
-                    {error}
-                    {warning}
                 </label>
+                {error}
+                {warning}
                 <hr style={styles.hr}></hr>
                 {this.props.readOnly ? input : select}
             </div>

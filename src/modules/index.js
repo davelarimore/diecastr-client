@@ -7,7 +7,6 @@ import modelDetail from './modelDetail';
 import addModel from './addModel';
 import account from './account';
 import auth from './auth';
-import protectedData from './protected-data';
 
 export default combineReducers({
     home,
@@ -17,6 +16,5 @@ export default combineReducers({
     addModel,
     account,
     auth,
-    protectedData,
     form: formReducer,
 })

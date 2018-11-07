@@ -1,7 +1,7 @@
 import React from 'react';
-import { Toggle } from './toggle';
+import { SignUpForm } from './signUpForm';
 import { shallow, mount } from 'enzyme';
 
 it('Renders without crashing', () => {
-    shallow(<Toggle />);
-}); 
+    shallow(<SignUpForm handleSubmit={() => { }} />);
+});

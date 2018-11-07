@@ -2,9 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router-dom';
 
-// import colors from '../colors';
-// import mediaQueries from '../mediaQueries';
-
 const styles = {
     li: {
         display: 'inline-block',
@@ -37,12 +34,14 @@ const styles = {
 export class PublicNav extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            showMenu: false
+        }
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
     }
 
     showMenu(event) {
-        event.preventDefault();
         this.setState({ showMenu: true }, () => {
             document.addEventListener('click', this.closeMenu);
         });
@@ -58,7 +57,7 @@ export class PublicNav extends React.Component {
 
     render() {
         return (
-            <li style={styles.li}>
+            <li className='publicNav' style={styles.li}>
                 <p onClick={this.showMenu}>Menu</p>
                 {
                     this.state.showMenu

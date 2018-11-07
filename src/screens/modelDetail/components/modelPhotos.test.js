@@ -2,8 +2,6 @@ import React from 'react';
 import { ModelPhotos } from './modelPhotos';
 import { shallow, mount } from 'enzyme';
 
-
-// default state
 const model = {
             title: '1980 Camaro',
             modelMfg: 'Hot Wheels',
@@ -19,14 +17,13 @@ const model = {
             status: 'Not for sale',
             notes: 'Lorem ipsum dolor sit amet',
             tags: ['rally', 'livery'],
-            photos: [
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-                'https://vignette.wikia.nocookie.net/hotwheels/images/a/a8/Z28_white.JPG/revision/latest?cb=20091207051315',
-            ],
+            photo1Url: 'test',
+            photo2Url: 'test',
+            photo3Url: 'test',
+            photo4Url: 'test',
         }
 
 it('Renders without crashing', () => {
-    shallow(<ModelPhotos model={model}/>);
+    const wrapper = shallow(<ModelPhotos model={model}/>);
+    expect(wrapper.childAt(0).hasClass('modelTitle')).toEqual(true);
 });

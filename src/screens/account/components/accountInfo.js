@@ -3,7 +3,6 @@ import Radium from 'radium';
 import AccountInfoForm from './accountInfoForm'
 import UploadAvatarForm from './uploadAvatarForm';
 import colors from '../../../common/colors';
-// import colors from '../../../common/colors';
 
 const styles = {
     container: {
@@ -13,7 +12,6 @@ const styles = {
     column: {
         display: 'flex',
         alignItems: 'center',
-        // justifyContent: 'space-between',
         width: '46%',
         borderRadius: 8,
         backgroundColor: '#DDD',
@@ -40,7 +38,6 @@ const styles = {
         position: 'relative',
         backgroundColor: colors.darkGrey,
         textAlign: 'left',
-        // margin: '0 2% 2% 0',
         paddingBottom: '40%',
         width: '40%',
         borderRadius: 8,

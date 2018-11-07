@@ -1,6 +1,5 @@
 import React from 'react';
 import Radium from 'radium';
-// import FilterMenu from './filterMenu';
 import colors from '../../../common/colors';
 
 const styles = {
@@ -21,9 +20,6 @@ export const CollectionHeader = (props) => {
     return (
         <section>
             <h1 style={styles.h1}>{props.collectionName}</h1>
-            {/* <nav style={styles.nav}> */}
-                    {/* <FilterMenu setFilter={props.setFilter}/> */}
-            {/* </nav> */}
         </section>
     );
 }

@@ -59,8 +59,9 @@ export function updateUserInfo(user) {
 
 // thunks
 export const getAccount = () => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
     dispatch(setLoading(true));
-    getUser()
+    getUser(authToken)
         .then(user => {
             dispatch(setLoading(false));
             dispatch(addUser(user))
@@ -72,8 +73,9 @@ export const getAccount = () => (dispatch, getState) => {
 }
 
 export const updateUserData = (userData) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
     dispatch(setLoading(true));
-    updateUser(userData)
+    updateUser(userData, authToken)
         .then(user => {
             dispatch(setLoading(false));
             dispatch(addUser(user))

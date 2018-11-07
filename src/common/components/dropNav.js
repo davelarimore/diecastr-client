@@ -1,7 +1,5 @@
 import React from 'react';
 import Radium from 'radium';
-// import colors from '../colors';
-// import mediaQueries from '../mediaQueries';
 
 const styles = {
     li: {
@@ -37,7 +35,6 @@ export class DropNav extends React.Component {
         super(props);
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
-        // this.linkToggle = this.linkToggle.bind(this);
     }
 
     showMenu(event) {
@@ -54,17 +51,6 @@ export class DropNav extends React.Component {
             });
         }
     }
-
-    // visually toggle selected filter
-    // linkToggle(linkIndex) {
-    //     let links = this.props.links;
-    //     links[linkIndex].active = true;
-    //     links.map((link, index) => {
-    //         if (index !== linkIndex) link.active = false;
-    //         return null
-    //     });
-    //     this.setState(links);
-    // }
 
     render() {
         return (

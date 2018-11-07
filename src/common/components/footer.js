@@ -1,7 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
 import colors from '../colors';
-// import mediaQueries from '../mediaQueries';
 import images from '../images'
 
 const styles = {
@@ -18,7 +17,6 @@ const styles = {
         maxWidth: '100px',
         opacity: 0.5,
         marginTop: 5,
-        // height: '50px',
     },
     img: {
         width: '100%',

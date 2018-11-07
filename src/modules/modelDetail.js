@@ -89,8 +89,9 @@ export const getModelDetail = (id) => (dispatch, getState) => {
 }
 
 export const updateModelData = (modelData) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
     dispatch(setLoading(true));
-    updateModel(modelData)
+    updateModel(modelData, authToken)
         .then(model => {
             dispatch(setLoading(false));
             dispatch(saveModel(model));
@@ -102,9 +103,10 @@ export const updateModelData = (modelData) => (dispatch, getState) => {
 }
 
 export const deleteModel = (modelId) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
     dispatch(setLoading(true));
     dispatch(setDeleted());
-    deleteMyModel(modelId)
+    deleteMyModel(modelId, authToken)
         .then(() => {            
             dispatch(setLoading(false));
         })

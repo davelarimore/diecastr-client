@@ -8,9 +8,11 @@ import modelTextArea from './modelTextArea';
 import { required, nonEmpty, isCurrency, isCommaDelimited } from '../../../utils/validators';
 import { updateModelData, deleteModel } from '../../../modules/modelDetail';
 
+import DeleteModelDialog from './deleteModelDialog';
+
 import './modelForm.css';
 
-class ModelFormComponent extends React.Component {
+export class ModelFormComponent extends React.Component {
 
     render() {
 
@@ -109,7 +111,6 @@ class ModelFormComponent extends React.Component {
         return (
             <section>
                 <form
-                    // // id='model-form'
                     className="modelForm"
                     onSubmit={handleSubmit}
                 >
@@ -141,7 +142,6 @@ class ModelFormComponent extends React.Component {
                             name="scale"
                             id="scale"
                             autoComplete='on'
-                            validate={[required, nonEmpty]}
                             props={readOnly}
                         />
                         <Field
@@ -265,22 +265,13 @@ class ModelFormComponent extends React.Component {
                         : null
                     }
                 </form>
-                {loggedIn
-                    ? <p className='deleteButton' onClick={() => {
-                        if (window.confirm('Are you sure you wish to delete this item?')) {
-                            deleteModel(modelId)
-                        }
-                    }}>
-                        Delete
-                    </p>
-                    : null
-                }
+
+                <DeleteModelDialog deleteModel={deleteModel} modelId={modelId}/>
+               
             </section>
         )
     }
 }
-// }
-
 
 // Decorate with reduxForm(). It will read the initialValues prop provided by connect()
 const ModelForm = reduxForm({

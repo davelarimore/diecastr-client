@@ -63,9 +63,10 @@ export function setCollectionAttribute(collectionAttribute) {
 
 // thunks
 export const getCollectionModels = (currentPage = 1) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
     const pageSize = 12;
     dispatch(setLoading(true));
-    return getModels(currentPage, pageSize)
+    return getModels(currentPage, pageSize, authToken)
         .then(collection => {
             dispatch(setLoading(false));
             dispatch(setCollectionAttribute(collection));
@@ -93,8 +94,9 @@ export const getModelDetail = () => (dispatch, getState, modelId) => {
 
 //toggle collection sharing from account screen
 export const updateCollectionData = (collectionData) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
     dispatch(setLoading(true));
-    updateCollection(collectionData)
+    updateCollection(collectionData, authToken)
         .then(() => {
             dispatch(setLoading(false));
             dispatch(setCollectionAttribute(collectionData))

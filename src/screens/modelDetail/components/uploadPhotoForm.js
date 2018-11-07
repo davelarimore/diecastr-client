@@ -48,7 +48,7 @@ export class UploadPhotoForm extends React.Component {
         this.props.updateModelData(modelData)
         // Delete from S3
         if (oldFileName !== 'model-placeholder.svg')
-            deletePhoto(oldFileName)
+            deletePhoto(oldFileName, this.props.authToken)
     }
 
     render() {

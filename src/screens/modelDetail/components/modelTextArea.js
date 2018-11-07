@@ -50,9 +50,10 @@ const styles = {
         display: 'inline-block',
         flex: '1 1 100%',
         color: '#888',
+        backgroundColor: '#888',
         margin: '0',
-        borderStyle: 'solid',
-        borderWidth: 1,
+        border: 'none',
+        height: 1,
     }
 }
 
@@ -80,7 +81,6 @@ export class ModelTextArea extends React.Component {
             <div style={styles.field} className="form-input">
                 <label style={styles.label} htmlFor={this.props.input.name}>
                     {this.props.label}
-
                 </label>
                 {error}
                 {warning}

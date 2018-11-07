@@ -17,7 +17,6 @@ import {
     getModelDetail
 } from '../../modules/collection';
 
-
 const getVisibleModels = (models, filter) => {
     switch (filter) {
         case SHOW_ALL:
