@@ -26,12 +26,12 @@ export const registerUser = user => dispatch => {
         });
 };
 
-export const getUser = () => {
+export const getUser = (authToken) => {
     const url = `${API_BASE_URL}/users`;
-    return authorizedRequest(url, 'GET')
+    return authorizedRequest(url, 'GET', undefined, authToken)
 }
 
-export const updateUser = (userData) => {
+export const updateUser = (userData, authToken) => {
     const url = `${API_BASE_URL}/users`;
-    return authorizedRequest(url, 'PUT', userData)
+    return authorizedRequest(url, 'PUT', userData, authToken)
 }

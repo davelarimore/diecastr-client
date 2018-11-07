@@ -1,7 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
 import Toggle from './toggle';
-// import colors from '../../../common/colors';
 
 const styles = {
     h2: {
@@ -18,7 +17,6 @@ const styles = {
     stat: {
         width: '29%',
         backgroundColor: '#DDD',
-        // border: '1px solid rgba(0,0,0,0)',
         borderRadius: 8,
         margin: '2%',
         padding: 20,
@@ -39,9 +37,6 @@ const styles = {
         fontWeight: 700,
     },
     toggleLabel: {
-        // display: 'inline',
-        // height:'24px',
-        // lineHeight: '40px',
     }
 }
 

@@ -1,8 +1,9 @@
 import React from 'react';
-import { ModelPhotos } from './modelPhotos';
+import { ModelFormComponent } from './modelForm';
 import { shallow, mount } from 'enzyme';
 
-const model = {
+const model = [
+        {
             title: '1980 Camaro',
             modelMfg: 'Hot Wheels',
             scale: '1:64',
@@ -16,13 +17,10 @@ const model = {
             askingPrice: '30.00',
             status: 'Not for sale',
             notes: 'Lorem ipsum dolor sit amet',
-            tags: ['rally', 'livery'],
-            photo1Url: 'test',
-            photo2Url: 'test',
-            photo3Url: 'test',
-            photo4Url: 'test',
+            tags: ['test'],
         }
+    ]
 
 it('Renders without crashing', () => {
-    shallow(<ModelPhotos model={model}/>);
+    shallow(<ModelFormComponent model={model} handleSubmit={() => { }} />);
 });

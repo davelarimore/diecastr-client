@@ -59,7 +59,6 @@ const styles = {
         fontWeight: 700,
         lineHeight: 40,
         padding: 0,
-        // textIndent: 8,
         border: 'none',
         outline: 'none',
         backgroundColor: 'rgba(0,0,0,0)',
@@ -74,9 +73,10 @@ const styles = {
         display: 'inline-block',
         flex: '1 1 100%',
         color: '#888',
+        backgroundColor: '#888',
         margin: '0',
-        borderStyle: 'solid',
-        borderWidth: 1,
+        border: 'none',
+        height: 1,
     }
 }
 

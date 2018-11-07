@@ -1,14 +1,14 @@
 import { API_BASE_URL } from '../../config';
 import { authorizedRequest } from './index'
 
-export const getCollectionModels = (pageNo, pageSize) => {
+export const getCollectionModels = (pageNo, pageSize, authToken) => {
     const url = `${API_BASE_URL}/collections/models?pageNo=${pageNo}&size=${pageSize}`;
-    return authorizedRequest(url, 'GET')
+    return authorizedRequest(url, 'GET', undefined, authToken)
 }
 
-export const updateMyCollection = (collectionData) => {
+export const updateMyCollection = (collectionData, authToken) => {
     const url = `${API_BASE_URL}/collections/${collectionData.id}`;
-    return authorizedRequest(url, 'PUT', collectionData)
+    return authorizedRequest(url, 'PUT', collectionData, authToken)
 }
 
 export const getPublicCollectionModels = (id, pageNo, pageSize) => {

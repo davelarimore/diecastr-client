@@ -19,7 +19,6 @@ const styles = {
         margin: '0 3% 3% 0',
         paddingBottom: '22%',
         width: '22%',
-        // border: '1px solid rgba(0,0,0,0)',
         borderRadius: 8,
         overflow: 'hidden',
         '@media screen and (max-width: 768px)': {

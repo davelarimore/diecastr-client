@@ -1,15 +1,15 @@
-import {store} from '../../store'
-
 // API helper
-export const authorizedRequest = (url, method, data = undefined, headers = {}) => {
-    const authToken = store.getState().auth.authToken;
-    return fetch(url, {
-        method,
-        headers: {
+export const authorizedRequest = (url, method, data = undefined, authToken = undefined) => {
+    let headers;
+    if (authToken) {
+        headers = {
             Authorization: `Bearer ${authToken}`,
             "Content-type": "application/json",
-            ...headers
-        },
+        }
+    }
+    return fetch(url, {
+        method,
+        headers,
         body: JSON.stringify(data)
     })
     .then(res => {

@@ -24,13 +24,13 @@ const styles = {
     },
 }
 
-class Toggle extends React.Component {
+export class Toggle extends React.Component {
 
     render() {
         return (
-            <input type='button' style={styles.button} key='toggle' value={this.props.isPublic
-                ? 'YES'
-                : 'NO'} onClick={() => this.props.setPublic(!this.props.isPublic, this.props.collectionId)} />
+            <input type='button' style={styles.button} key='toggle'
+                value={this.props.isPublic ? 'YES' : 'NO'}
+                onClick={() => this.props.setPublic(!this.props.isPublic, this.props.collectionId)} />
         );
     }
 }

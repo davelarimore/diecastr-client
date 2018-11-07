@@ -25,6 +25,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 ### Future Features:
 * Add model search/filtering across collections
 * Post models to Instagram
+* Graphs on account page for various stats
 
 ## <a name="tech"></a>Technology used:
 
@@ -34,6 +35,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 * Radium
 * Redux-Form
 * Redux-Thunk
+* React-Router
 * Flexbox
 * JavaScript
 * Adobe XD, Illustrator and Photoshop
@@ -56,6 +58,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 * Postman
 * Travis CI
 * Heroku
+* AWS S3
 
 ## <a name="api"></a>API Documentation
 https://documenter.getpostman.com/view/4675682/RWTsrFTE

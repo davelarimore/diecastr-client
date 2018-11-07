@@ -54,8 +54,9 @@ export function unsetNew() {
 
 // thunks
 export const createNewModel = (modelData) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
     dispatch(setLoading(true));
-    createModel(modelData)
+    createModel(modelData, authToken)
         .then(model => {
             dispatch(setLoading(false));
             dispatch(saveModel(model._id))

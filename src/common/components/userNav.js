@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Radium from 'radium';
-// import colors from '../colors';
-// import mediaQueries from '../mediaQueries';
 
 const styles = {
     li: {

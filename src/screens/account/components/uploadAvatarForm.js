@@ -42,7 +42,7 @@ const styles = {
     }
 }
 
-class UploadAvatarForm extends React.Component {
+export class UploadAvatarForm extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -82,7 +82,7 @@ class UploadAvatarForm extends React.Component {
 
         // Delete from S3
         if (oldFileName !== 'user-placeholder.svg')
-            deletePhoto(oldFileName)
+            deletePhoto(oldFileName, this.props.authToken)
     }
 
     render() {

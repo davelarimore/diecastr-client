@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Radium from 'radium';
 import { getPublicCollectionModels } from '../../../modules/collection';
-// import { getCollectionModels } from '../../../modules/collection';
 import colors from '../../../common/colors';
 import { getRangeWithDots } from '../../../utils/helpers'
 
@@ -72,7 +71,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    // getPage: page => dispatch(getCollectionModels(page)),
     getPage: (collectionId, page) => dispatch(getPublicCollectionModels(collectionId, page)),
 
 })

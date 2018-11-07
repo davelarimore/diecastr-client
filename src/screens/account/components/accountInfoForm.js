@@ -6,14 +6,12 @@ import { updateUserData } from '../../../modules/account';
 
 const styles = {
     input: {
-        // width: '100%',
         height: 40,
         fontSize: 18,
         fontWeight: 700,
         lineHeight: 40,
         padding: 0,
         textAlign: 'center',
-        // textIndent: 8,
         border: 'none',
         outline: 'none',
         borderRadius: 4,
@@ -52,7 +50,7 @@ const renderField = field => (
     </div>
 );
 
-class AccountInfoFormComponent extends React.Component {
+export class AccountInfoFormComponent extends React.Component {
     render() {
         const { handleSubmit } = this.props;
         return (

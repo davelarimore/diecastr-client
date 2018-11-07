@@ -7,7 +7,7 @@ import App from './app';
 import registerServiceWorker from './utils/registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import rootStyles from './common/rootStyles';
- 
+
 ReactDOM.render(
     <StyleRoot>
         <Style rules={rootStyles} />

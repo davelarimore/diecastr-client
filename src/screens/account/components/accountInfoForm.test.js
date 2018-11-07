@@ -3,5 +3,5 @@ import { AccountInfoFormComponent } from './accountInfoForm';
 import { shallow, mount } from 'enzyme';
 
 it('Renders without crashing', () => {
-    shallow(<AccountInfoFormComponent handleSubmit='' />);
+    shallow(<AccountInfoFormComponent />);
 });

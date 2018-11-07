@@ -27,7 +27,6 @@ it('Renders without crashing', () => {
         options={options}/>);
 });
 
-
 it('Renders supplied label', () => {
     const wrapper = shallow(<ModelSelect
         meta={meta}

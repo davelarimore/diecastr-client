@@ -1,22 +1,15 @@
-.photoButtonContainer {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    bottom: 10px;
-    right: 0;
+.deleteButton {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin: 0 0 30px 0;
+    padding: 0;
 }
 
-/* .photoUploadForm {
-    z-index: 5;
-} */
-
-.photoUploadInput {
-    display: none;
-}
-
-.photoButton {
+.modalButton {
     flex: 0 1 10%;
     font-size: 12px;
     font-weight: 700;
@@ -28,22 +21,28 @@
     background-color: #FFF;
     padding: 6px 12px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
-.photoButton:hover {
+.modalButton:hover {
     background-color: #CCC;
 }
 
+.modalTitle {
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
 @media screen and (max-width: 420px) {
-    .photoButton {
+    .modalButton {
         font-size: 10px;
         padding: 5px 10px;
     }
 }
 
 @media screen and (max-width: 340px) {
-    .photoButton {
+    .modalButton {
         font-size: 10px;
         padding: 5px 8px;
     }

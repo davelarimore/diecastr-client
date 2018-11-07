@@ -43,15 +43,6 @@
      background-color: #1b1464;
  }
 
- .deleteButton {
-     font-size: 16px;
-     color: #333;
-     text-decoration: none;
-     cursor: pointer;
-     margin: 0 0 30px 0;
-     padding: 0;
- }
-
  @media screen and (max-width: 520px) {
      .modelForm {
          margin-right: 0;

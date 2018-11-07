@@ -15,17 +15,17 @@ export const getModelDetail = (authToken, id) => {
     )
 }
 
-export const createNewModel = (modelData) => {
+export const createNewModel = (modelData, authToken) => {
     const url = `${API_BASE_URL}/models`;
-    return authorizedRequest(url, 'POST', modelData)
+    return authorizedRequest(url, 'POST', modelData, authToken)
 }
 
-export const updateModelData = (modelData) => {
+export const updateModelData = (modelData, authToken) => {
     const url = `${API_BASE_URL}/models/${modelData._id}`;
-    return authorizedRequest(url, 'PUT', modelData)
+    return authorizedRequest(url, 'PUT', modelData, authToken)
 }
 
-export const deleteModel = (modelId) => {
+export const deleteModel = (modelId, authToken) => {
     const url = `${API_BASE_URL}/models/${modelId}`;
-    return authorizedRequest(url, 'DELETE')
+    return authorizedRequest(url, 'DELETE', undefined, authToken)
 }

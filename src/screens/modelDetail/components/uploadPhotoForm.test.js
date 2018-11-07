@@ -3,5 +3,6 @@ import { UploadPhotoForm } from './uploadPhotoForm';
 import { shallow, mount } from 'enzyme';
 
 it('Renders without crashing', () => {
-    shallow(<UploadPhotoForm photoKey='photoUrl1' />);
+    const wrapper = shallow(<UploadPhotoForm photoKey='photoUrl1' />);
+    expect(wrapper.hasClass('photoButtonContainer')).toEqual(true);
 });
