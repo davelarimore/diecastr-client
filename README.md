@@ -10,7 +10,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 !["Mobile"](public/images/diecastr-mobile.jpg "Mobile")
 !["Mobile"](public/images/diecastr-logos.jpg "Mobile")
 
-[View wireframes](https://drive.google.com/file/d/1F-8mfV7Z_T9rB_XOKLh2tAonew1ns1UJ/view?usp=sharing)
+[View wireframes](https://drive.google.com/drive/folders/1t0UjjcRokJ6lbdjfXwul8u0Ksen8lZSD?usp=sharing)
 
 ### Client features:
 * Can update their user profile and sharing settings
@@ -59,9 +59,6 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 * Travis CI
 * Heroku
 * AWS S3
-
-## <a name="api"></a>API Documentation
-https://documenter.getpostman.com/view/4675682/RWTsrFTE
 
 ## <a name="demo"></a>Demo:
 ### Users can access the application at the below URL:
