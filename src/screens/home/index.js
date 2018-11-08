@@ -2,11 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PublicCollectionsList from '../../common/components/publicCollectionsList';
 import Loading from '../../common/components/loading';
-import { getCommunity } from '../../modules/home';
+import { getCommunity, setLoading } from '../../modules/home';
 
 class Home extends React.Component {
+
     componentDidMount() {
         this.props.getCommunity();
+        this.props.setLoading(false);
     }
 
     render() {
@@ -24,13 +26,13 @@ class Home extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    getCommunity: () => dispatch(getCommunity())
+    getCommunity: () => dispatch(getCommunity()),
+    setLoading: (loading) => dispatch(setLoading(loading))
 });
 
 const mapStateToProps = (state) => ({
     collections: state.home.collections,
     loading: state.home.loading,
-    loggedIn: state.auth.currentUser !== null
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

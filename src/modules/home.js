@@ -12,6 +12,7 @@ const defaultState = {
             userId: '',
         }
     ],
+    loading: true,
 }
 
 // reducer

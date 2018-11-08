@@ -1,8 +1,6 @@
 language: node_js
-node_js: node
-cache:
-  directories:
-  - node_modules
+node_js: 10.5
+cache: npm
 deploy:
   provider: heroku
   api_key:

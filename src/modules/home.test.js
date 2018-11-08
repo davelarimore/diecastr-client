@@ -42,6 +42,7 @@ const defaultState = {
             userId: '',
         }
     ],
+    loading: true,
 }
 
 describe('reducer', () => {

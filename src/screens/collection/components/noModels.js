@@ -12,7 +12,6 @@ export const NoModels = () => {
     return (
         <div style={styles.noModels}>
             <p>No models in collection.</p>
-            <p>Click the button below to add one.</p>
         </div>
     );
 }

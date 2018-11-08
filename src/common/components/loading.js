@@ -6,21 +6,26 @@ import colors from '../colors';
 const styles = {
     loadingContainer: {
         position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        width: 200,
+        height: 145,
+        border: 'none',
+        borderRadius: 8,
         backgroundColor: colors.brandColor,
         zIndex: 100,
-        padding: '30%',
+        padding: 30,
     },
-
 }
 
 export const Loading = (props) => {
     return (
         <div style={styles.loadingContainer}>
-            < Loadable
+            <Loadable
                 active={true}
                 spinner={true}
                 animate={true}
