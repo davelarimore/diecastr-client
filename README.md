@@ -60,6 +60,9 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 * Heroku
 * AWS S3
 
+## <a name="install"></a>API Documentation
+See [API repo](https://github.com/davelarimore/diecastr-api)
+
 ## <a name="demo"></a>Demo:
 ### Users can access the application at the below URL:
 https://diecastr.herokuapp.com
@@ -75,6 +78,6 @@ Dependencies:
 * Node 10.5.0
 * Mongo 3.1.0
 
-config.js may need to be updated to suit your environment
+.env file must be created (template provided)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
