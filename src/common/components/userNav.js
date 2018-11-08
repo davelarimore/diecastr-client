@@ -57,7 +57,7 @@ export class UserNav extends React.Component {
 
     render() {
         return (
-            <li className='userNav' style={styles.li}>
+            <div className='userNav' style={styles.li}>
                 <p onClick={this.showMenu}>Menu</p>
                 {
                     this.state.showMenu
@@ -87,7 +87,7 @@ export class UserNav extends React.Component {
                             null
                         )
                 }
-            </li>
+            </div>
         );
     }
 }

@@ -16,7 +16,7 @@ export function SignUpContainer(props) {
         <section>
             <h1>Sign Up for Diecastr</h1>
             <SignUpForm registerUser={props.registerUser} login={props.login}/>
-            <Link to="/login">Login</Link>
+            <Link to="/login" style={{ display: 'inline-block', marginBottom: 30 }}>Login</Link>
         </section>
     );
 }

@@ -40,12 +40,16 @@ const styles = {
         ':hover': {
             color: '#CCC',
         },
+    },
+    label: {
+        display: 'block',
     }
 }
 
 const renderField = field => (
     <div>
-        <input style={styles.input} {...field.input} />
+        <label style={styles.label} htmlFor={field.label}>User Name</label>
+        <input style={styles.input} {...field.input} id={field.input.name}/>
         {field.touched && field.error && <div className="error">{field.error}</div>}
     </div>
 );
@@ -55,8 +59,7 @@ export class AccountInfoFormComponent extends React.Component {
         const { handleSubmit } = this.props;
         return (
                 <form onSubmit={handleSubmit}>
-                <label>User Name</label>
-                    <Field name="userName" type="text" component={renderField} />
+                    <Field name="userName" type="text" id='userName' label='userName' component={renderField} />
                     <button style={styles.button} action="submit">Save changes</button>
                 </form>
         );

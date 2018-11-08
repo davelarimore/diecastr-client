@@ -90,7 +90,7 @@ const styles = {
 
 export const Hero = () => {
     return (
-        <header style={styles.header}>
+        <header style={styles.header} role='banner'>
             <div style={styles.container}>
                 <div style={styles.column}>
                     <Link to="/">

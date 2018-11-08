@@ -179,7 +179,6 @@ export class ModelFormComponent extends React.Component {
                             type="number"
                             name="mfgYear"
                             id="mfgYear"
-                            autoComplete='off'
                             props={readOnly}
                         />
                         <Field
@@ -188,7 +187,6 @@ export class ModelFormComponent extends React.Component {
                             type="number"
                             name="purchaseYear"
                             id="purchaseYear"
-                            autoComplete='off'
                             props={readOnly}
                         />
                     </div>
@@ -199,7 +197,6 @@ export class ModelFormComponent extends React.Component {
                             type="number"
                             name="purchasePrice"
                             id="purchasePrice"
-                            autoComplete='off'
                             validate={[isCurrency]}
                             step='0.01'
                             props={readOnly}
@@ -210,7 +207,6 @@ export class ModelFormComponent extends React.Component {
                             type="number"
                             name="estValue"
                             id="estValue"
-                            autoComplete='off'
                             validate={[isCurrency]}
                             step='0.01'
                             props={readOnly}
@@ -221,7 +217,6 @@ export class ModelFormComponent extends React.Component {
                             type="number"
                             name="askingPrice"
                             id="askingPrice"
-                            autoComplete='off'
                             validate={[isCurrency]}
                             step='0.01'
                             props={readOnly}
@@ -266,8 +261,11 @@ export class ModelFormComponent extends React.Component {
                     }
                 </form>
 
-                <DeleteModelDialog deleteModel={deleteModel} modelId={modelId}/>
-               
+               {loggedIn
+                    ? <DeleteModelDialog deleteModel={deleteModel} modelId={modelId} />
+                    : null
+                }
+                
             </section>
         )
     }

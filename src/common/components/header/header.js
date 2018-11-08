@@ -47,7 +47,7 @@ const styles = {
 
 export const Header = (props) => {
     return (
-        <header style={styles.header}>
+        <header style={styles.header} role='banner'>
             <div style={styles.container}>
                 <Link to="/">
                     <img style={styles.logo} src={images.logo} alt='Diecastr' />

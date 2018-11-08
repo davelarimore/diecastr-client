@@ -12,7 +12,7 @@ export const DefaultLayout = ({ component: Component, ...rest }) => {
         <Route {...rest} render={matchProps => (
             <div className='defaultContainer'>
                 <Header />
-                <main className='defaultMain'>
+                <main className='defaultMain' role='main'>
                     <Component {...matchProps} />
                 </main>
                 {rest.addModelButton ? <AddModelButton /> : null}

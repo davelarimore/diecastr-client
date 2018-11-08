@@ -4,6 +4,7 @@ import Radium from 'radium';
 const styles = {
     section: {
         color: '#999',
+        marginBottom: 30,
     },
     h2: {
         fontSize: 18,

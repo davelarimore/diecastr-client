@@ -11,7 +11,7 @@ export const HomeLayout = ({ component: Component, ...rest }) => {
         <Route {...rest} render={matchProps => (
             <div>
                 <Hero />
-                <main className='homeMain'>
+                <main className='homeMain' role='main'>
                     <Component {...matchProps} />
                 </main>
                 <Footer />
