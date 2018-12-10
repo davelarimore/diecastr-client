@@ -64,7 +64,7 @@ describe('decodeToken', () => {
 import reducer from './auth';
 
 const defaultState = {
-    authToken: "{}",
+    authToken: null,
     currentUserId: null,
     loading: false,
     error: null
