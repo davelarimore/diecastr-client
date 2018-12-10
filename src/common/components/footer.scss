@@ -1,0 +1,37 @@
+@import "../variables.scss";
+
+footer {
+  background-color: $brandColor;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+.footerLogo {
+  max-width: 100px;
+  opacity: 0.5;
+  margin-top: 5px;
+}
+.footerLogo img {
+  width: 100%;
+}
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 0;
+  @media screen and (max-width: 1000px) {
+    padding: 25px 20px;
+  }
+}
+.copyright {
+  color: $lightText;
+  opacity: 0.5;
+  font-size: 12px;
+  line-height: 0;
+}

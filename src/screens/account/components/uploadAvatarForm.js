@@ -1,46 +1,9 @@
 import React from 'react';
-import Radium from 'radium';
 import { connect } from 'react-redux';
 import { API_BASE_URL } from '../../../config';
 import { updateUserData } from '../../../modules/account';
 import { deletePhoto } from '../../../modules/api/photos';
-
-const styles = {
-    buttonContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-        textAlign: 'center',
-        width: '60%',
-        paddingLeft: 20,
-    },
-    title: {
-        width: '100%',
-        marginBottom: 15,
-    },
-    form: {
-        zIndex: 5,
-    },
-    fileInput: {
-        display: 'none',
-    },
-    uploadButton: {
-        flex: '0 0 10%',
-        fontSize: 12,
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        border: 'none',
-        borderRadius: 4,
-        display: 'inline-block',
-        backgroundColor: '#FFF',
-        padding: '6px 12px',
-        cursor: 'pointer',
-        margin: '5px 10px',
-        ':hover': {
-            color: '#CCC',
-        },
-    }
-}
+import './uploadAvatarForm.scss';
 
 export class UploadAvatarForm extends React.Component {
     constructor() {
@@ -87,22 +50,22 @@ export class UploadAvatarForm extends React.Component {
 
     render() {
         return (                
-                <div style={styles.buttonContainer}>
-                    <p style={styles.title}>Profile Image</p>
-                    <form style={styles.form}>
-                        <label htmlFor="file-upload" style={styles.uploadButton} key='upload'>
+                <div className='buttonContainer'>
+                    <p className='avatarFormTitle'>Profile Image</p>
+                    <form className='avatarForm'>
+                    <label className='avatarFormButton' htmlFor="file-upload" key='upload'>
                             Upload
                     </label>
                         <input
                             id="file-upload"
-                            style={styles.fileInput}
+                            className='avatarFormFileInput'
                             label='upload file'
                             type='file'
                             accept='image/*'
                             onChange={(e) => this.submitFile(e.target.files)} />
                     </form>
                     <p
-                        style={styles.uploadButton}
+                        className='avatarFormButton'
                         key='delete'
                         onClick={() => this.deleteFile()}>
                         Delete
@@ -121,4 +84,4 @@ const mapDispatchToProps = dispatch => ({
     updateUserData: userData => { dispatch(updateUserData(userData)) },
 })
 
-export default Radium(connect(mapStateToProps, mapDispatchToProps)(UploadAvatarForm));
+export default connect(mapStateToProps, mapDispatchToProps)(UploadAvatarForm);

@@ -1,10 +1,9 @@
 import React from 'react';
-import Radium from 'radium';
 import { Field, reduxForm, focus } from 'redux-form';
 import Input from '../../../common/components/input';
 import { required, nonEmpty } from '../../../utils/validators';
 
-import './loginForm.css';
+import './loginForm.scss';
 
 export class LoginForm extends React.Component {
 
@@ -54,10 +53,8 @@ export class LoginForm extends React.Component {
     }
 }
 
-
-export default Radium(
+export default 
     reduxForm({
         form: 'login',
         onSubmitFail: (errors, dispatch) => dispatch(focus('login', 'email'))
     })(LoginForm)
-)

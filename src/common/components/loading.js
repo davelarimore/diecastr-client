@@ -1,30 +1,10 @@
 import React from 'react';
-import Radium from 'radium';
 import Loadable from 'react-loading-overlay';
-import colors from '../colors';
-
-const styles = {
-    loadingContainer: {
-        position: 'fixed',
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-        width: 200,
-        height: 145,
-        border: 'none',
-        borderRadius: 8,
-        backgroundColor: colors.brandColor,
-        zIndex: 100,
-        padding: 30,
-    },
-}
+import './loading.scss';
 
 export const Loading = (props) => {
     return (
-        <div style={styles.loadingContainer}>
+        <div className='loadingContainer'>
             <Loadable
                 active={true}
                 spinner={true}
@@ -37,4 +17,4 @@ export const Loading = (props) => {
     )
 }
 
-export default Radium(Loading);
+export default Loading;

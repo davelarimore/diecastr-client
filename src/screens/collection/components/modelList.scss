@@ -1,3 +1,5 @@
+@import "../../../common/variables.scss";
+
 .modelListThumbnails {
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +23,7 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $breakLarge) {
     .modelListThumbnail {
         width: 48%;
     }
@@ -59,7 +61,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: $breakTiny) {
     .modelListThumbnail h2 {
         font-size: 14px;
     }

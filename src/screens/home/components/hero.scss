@@ -1,0 +1,90 @@
+@import "../../../common/variables.scss";
+
+.hero {
+  flex: 1 1;
+  // backgrond image is set as React inline
+  background-size: cover;
+  background-color: $brandColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 80px 15px;
+  @media screen and (max-width: $breakLarge) {
+    padding: 30px 15px;
+  }
+  @media screen and (max-width: $breakSmall) {
+    padding: 30px 15px;
+  }
+}
+
+.heroContainer {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroColumn {
+  max-width: 400px;
+  text-align: center;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  @media screen and (max-width: $breakLarge) {
+    width: 80%;
+    padding: 30px;
+  }
+  @media screen and (max-width: $breakSmall) {
+    width: 80%;
+    padding: 30px;
+  }
+}
+
+.heroColumn img {
+  max-width: 300px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.heroButton {
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $darkText;
+  padding: 7px 25px;
+  margin: 0 15px;
+  border-radius: 8px;
+  background-color: $buttonBackground;
+}
+
+.heroButton:hover {
+  background-color: darken($buttonBackground, 15);
+  @media screen and (max-width: $breakLarge) {
+    font-size: 12px;
+    padding: 4px 15px;
+  }
+  @media screen and (max-width: $breakSmall) {
+    font-size: 12px;
+    padding: 4px 15px;
+    margin: 0 3%;
+  }
+}
+
+.heroColumn h2 {
+  font-size: 24px;
+  line-height: 1.4em;
+  font-weight: 400;
+  text-transform: none;
+  color: $lightText;
+  margin: 30px 0;
+  @media screen and (max-width: $breakLarge) {
+    fontsize: 18px;
+    margin: 20px 0;
+  }
+  @media screen and (max-width: $breakSmall) {
+    fontsize: 18px;
+    margin: 10px 0 30px 0;
+  }
+}

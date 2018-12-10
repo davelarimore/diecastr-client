@@ -1,7 +1,7 @@
- /* Radium would not render these media queries... */
+@import "../../../common/variables.scss";
 
  .modelForm {
-     font-family: "Lato", sans-serif;
+     font-family: 'Lato', sans-serif;
      display: flex;
      flex-wrap: wrap;
      margin-right: -40px;
@@ -19,7 +19,7 @@
  }
 
  .modelSubmit {
-     font-family: "Lato", sans-serif;
+     font-family: 'Lato', sans-serif;
      display: inline-block;
      width: 100%;
      font-size: 16px;
@@ -30,20 +30,20 @@
      border: 1px solid rgba(0, 0, 0, 0);
      border-radius: 8px;
      cursor: pointer;
-     color: #FFF;
+     color: $lightText;
      padding: 7px 20px;
      margin-top: 0;
      margin-right: 40px;
      margin-bottom: 15px;
      border: none;
-     background-color: #333;
+     background-color: $darkGrey;
  }
 
  .modelSubmit:hover {
-     background-color: #1b1464;
+     background-color: lighten($brandColor, 15);
  }
 
- @media screen and (max-width: 520px) {
+ @media screen and (max-width: $breakMedium) {
      .modelForm {
          margin-right: 0;
      }

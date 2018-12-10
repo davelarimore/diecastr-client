@@ -1,3 +1,5 @@
+@import "../../../common/variables.scss";
+
 .modelThumbnails {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +14,7 @@
     flex: 1 1 130px;
     display: inline-block;
     position: relative;
-    background-color: #444;
+    background-color: $placeholderImg;
     text-align: left;
     margin: 0 2% 2% 0;
     border: none;
@@ -62,7 +64,7 @@
     right: 0;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: $breakMedium) {
     .modelTitle {
         font-size: 18px;
     }

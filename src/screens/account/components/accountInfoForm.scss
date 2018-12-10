@@ -1,0 +1,43 @@
+@import "../../../common/variables.scss";
+
+.accountFormInput {
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: $formInputBackground;
+  margin: 10px 0;
+  :focus {
+    background-color: #ccc;
+    height: 40px;
+    line-height: 40px;
+    outline-offset: 0;
+  }
+}
+
+.accountFormButton {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: $buttonBackground;
+  padding: 6px 15px;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+.accountFormButton:hover {
+    background-color: darken($buttonBackground, 5);
+  }
+
+.accountFormLabel {
+  display: block;
+}

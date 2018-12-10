@@ -1,10 +1,8 @@
 import React from 'react';
-import Radium from 'radium';
 import { Route } from 'react-router-dom';
 import Hero from './hero';
 import Footer from '../../../common/components/footer';
-
-import './homeLayout.css'
+import './homeLayout.scss';
 
 export const HomeLayout = ({ component: Component, ...rest }) => {
     return (
@@ -20,4 +18,4 @@ export const HomeLayout = ({ component: Component, ...rest }) => {
     )
 };
 
-export default Radium(HomeLayout);
+export default HomeLayout;

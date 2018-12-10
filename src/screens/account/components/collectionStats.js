@@ -1,44 +1,6 @@
 import React from 'react';
-import Radium from 'radium';
 import Toggle from './toggle';
-
-const styles = {
-    h2: {
-        fontSize: 24,
-        fontWeight: 900,
-        textTransform: 'uppercase',
-        margin: '10px 0 5px 0',
-    },
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        marginBottom: 25,
-    },
-    stat: {
-        width: '29%',
-        backgroundColor: '#DDD',
-        borderRadius: 8,
-        margin: '2%',
-        padding: 20,
-        '@media screen and (max-width: 767px)': {
-            width: '96%',
-        },
-        '@media screen and (max-width: 420px)': {
-            width: '96%',
-        }
-    },
-    statTitle: {
-        fontSize: 18,
-        marginBottom: 10,
-    },
-    statValue: {
-        fontSize: 32,
-        lineHeight: '32px',
-        fontWeight: 700,
-    },
-    toggleLabel: {
-    }
-}
+import './collectionStats.scss'
 
 export const CollectionStats = (props) => {
 
@@ -51,26 +13,26 @@ export const CollectionStats = (props) => {
 
     return (
         <section>
-            <h2 style={styles.h2}>My Collection</h2>
-            <p style={styles.toggleLabel}>Public:&nbsp;
+            <h2 >My Collection</h2>
+            <p className='toggleLabel'>Public:&nbsp;
                 <Toggle />
             </p>
-            <div style={styles.container}>
-                <div style={styles.stat}>
-                    <p style={styles.statTitle}>Models in Collection</p>
-                    <p style={styles.statValue}>{props.models.length > 0 ? props.models.length : 0}</p>
+            <div className='container'>
+                <div className='stat'>
+                    <p className='statTitle'>Models in Collection</p>
+                    <p className='statValue'>{props.models.length > 0 ? props.models.length : 0}</p>
                 </div>
-                <div style={styles.stat}>
-                    <p style={styles.statTitle}>Total Spent on Models</p>
-                    <p style={styles.statValue}>${paidTotal}</p>
+                <div className='stat'>
+                    <p className='statTitle'>Total Spent on Models</p>
+                    <p className='statValue'>${paidTotal}</p>
                 </div>
-                <div style={styles.stat}>
-                    <p style={styles.statTitle}>Estimated Collection Value</p>
-                    <p style={styles.statValue}>${estTotal}</p>
+                <div className='stat'>
+                    <p className='statTitle'>Estimated Collection Value</p>
+                    <p className='statValue'>${estTotal}</p>
                 </div>
             </div>
         </section>
     );
 }
 
-export default Radium(CollectionStats);
+export default CollectionStats;

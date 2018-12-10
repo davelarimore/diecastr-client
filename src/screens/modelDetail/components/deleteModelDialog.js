@@ -1,27 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import colors from '../../../common/colors'
-
-import './deleteModelDialog.css';
-
-const modalStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-        padding: 30,
-        color: '#FFF',
-        backgroundColor: colors.brandColor,
-        border: 'none',
-        borderRadius: 8,
-    },
-    overlay: {
-        backgroundColor: 'rgba(255,255,255,0.5)',
-    }
-};
+import './deleteModelDialog.scss';
 
 // Bind modal to appElement
 if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
@@ -62,8 +41,9 @@ export class DeleteModelButton extends React.Component {
                     isOpen={this.state.modalIsOpen}
                     onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.closeModal}
-                    style={modalStyles}
                     contentLabel="Modal"
+                    className="deleteModelModal"
+                    overlayClassName="deleteModelOverlay"
                 >
 
                     <h2 className='modalTitle'>Delete Model?</h2>

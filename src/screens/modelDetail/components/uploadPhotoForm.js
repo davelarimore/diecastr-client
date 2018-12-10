@@ -4,7 +4,7 @@ import { API_BASE_URL } from '../../../config';
 import { updateModelData } from '../../../modules/modelDetail';
 import { deletePhoto } from '../../../modules/api/photos';
 
-import './uploadPhotoForm.css';
+import './uploadPhotoForm.scss';
 
 export class UploadPhotoForm extends React.Component {
     constructor() {

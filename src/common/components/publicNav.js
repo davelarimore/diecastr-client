@@ -1,35 +1,6 @@
 import React from 'react';
-import Radium from 'radium';
 import { Link } from 'react-router-dom';
-
-const styles = {
-    li: {
-        display: 'inline-block',
-        position: 'relative',
-        cursor: 'pointer',
-        margin: '0 10px',
-    },
-    dropDownUl: {
-        position: 'absolute',
-        right: 0,
-        listStyle: 'none',
-        textAlign: 'left',
-        fontSize: 16,
-        backgroundColor: 'white',
-        padding: 15,
-        margin: '10px 0 0 0',
-        zIndex: 5,
-        width: 150,
-    },
-    dropDownLi: {
-        whiteSpace: 'nowrap',
-        margin: '10px 10px',
-        cursor: 'pointer',
-    },
-    active: {
-        fontWeight: '700',
-    }
-}
+import './publicNav.scss';
 
 export class PublicNav extends React.Component {
     constructor(props) {
@@ -57,24 +28,24 @@ export class PublicNav extends React.Component {
 
     render() {
         return (
-            <li className='publicNav' style={styles.li}>
+            <li className='publicNav'>
                 <p onClick={this.showMenu}>Menu</p>
                 {
                     this.state.showMenu
                         ? (
-                            <ul style={styles.dropDownUl}
-                                className="menu"
+                            <ul className='navDropDownUl'
+                                // className="menu"
                                 ref={(element) => {
                                     this.dropdownMenu = element;
                                 }}
                             >
-                                <li style={styles.dropDownLi}>
+                                <li className='navDropDownLi'>
                                     <Link to='/login'><p>Log In</p></Link>
                                 </li>
-                                <li style={styles.dropDownLi}>
+                                <li className='navDropDownLi'>
                                     <Link to='/sign-up'><p>Sign Up</p></Link>
                                 </li>
-                                <li style={styles.dropDownLi}>
+                                <li className='navDropDownLi'>
                                     <Link to='/community'><p>Community</p></Link>
                                 </li>
                             </ul>
@@ -88,4 +59,4 @@ export class PublicNav extends React.Component {
     }
 }
 
-export default Radium(PublicNav);
+export default PublicNav;
