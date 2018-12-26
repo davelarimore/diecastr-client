@@ -1,19 +1,13 @@
 import React from 'react';
-import Radium from 'radium';
-
-const styles = {
-    noModels: {
-        margin: '25px 0 0 0',
-    },
-}
+import './noModels.scss';
 
 export const NoModels = () => {
 
     return (
-        <div style={styles.noModels}>
+        <div className='noModels'>
             <p>No models in collection.</p>
         </div>
     );
 }
 
-export default Radium(NoModels);
+export default NoModels;

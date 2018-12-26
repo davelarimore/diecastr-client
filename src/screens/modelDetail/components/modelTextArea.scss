@@ -1,0 +1,61 @@
+@import "../../../common/variables.scss";
+
+.modelTextAreaField {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.modelTextAreaField label {
+  color: $formLabels;
+  display: inline-block;
+  flex: 1 1 50%;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.modelTextAreaField textArea {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+  padding: 8px 0;
+  resize: none;
+  border: none;
+  outline: none;
+  background-color: $transparent;
+}
+
+.modelTextAreaField textarea:focus {
+  background-color: #ccc;
+  outline-offset: 0;
+}
+
+.error,
+.warning {
+  display: inline-block;
+  flex: 1 1 50%;
+  text-align: right;
+  font-size: 12px;
+}
+
+error {
+  color: $errorColor;
+}
+
+warning {
+  color: $warningColor;
+}
+
+.modelTextAreaField hr {
+  display: inline-block;
+  flex: 1 1 100%;
+  color: $formLabelBorder;
+  background-color: $formLabelBorder;
+  margin: 0;
+  border: none;
+  height: 1px;
+}

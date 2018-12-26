@@ -1,5 +1,4 @@
 import React from 'react';
-import Radium from 'radium';
 import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form';
 import modelInput from './modelInput';
@@ -10,7 +9,7 @@ import { updateModelData, deleteModel } from '../../../modules/modelDetail';
 
 import DeleteModelDialog from './deleteModelDialog';
 
-import './modelForm.css';
+import './modelForm.scss';
 
 export class ModelFormComponent extends React.Component {
 
@@ -287,4 +286,4 @@ const mapDispatchToProps = dispatch => ({
     deleteModel: modelId => { dispatch(deleteModel(modelId)) },
 })
 
-export default Radium(connect(mapStateToProps, mapDispatchToProps)(ModelForm))
+export default connect(mapStateToProps, mapDispatchToProps)(ModelForm)

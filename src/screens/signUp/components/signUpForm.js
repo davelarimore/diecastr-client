@@ -1,11 +1,10 @@
 import React from 'react';
-import Radium from 'radium';
 import { Field, reduxForm, focus } from 'redux-form';
 
 import Input from '../../../common/components/input';
 import { required, nonEmpty, matches, length, isTrimmed, isEmail } from '../../../utils/validators';
 
-import '../../login/components/loginForm.css';
+import '../../login/components/loginForm.scss';
 
 const userNameLength = length({ min: 3, max: 36 });
 const passwordLength = length({ min: 8, max: 72 });
@@ -71,9 +70,8 @@ export class SignUpForm extends React.Component {
     }
 }
 
-export default Radium(
+export default 
     reduxForm({
         form: 'registration',
         onSubmitFail: (errors, dispatch) => dispatch(focus('registration', 'email'))
     })(SignUpForm)
-)

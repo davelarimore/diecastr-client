@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import './modelList.css';
+import './modelList.scss';
 
 export const ModelList = (props) => {
 

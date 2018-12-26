@@ -1,0 +1,76 @@
+@import "../../../common/variables.scss";
+
+.modelSelectField {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.modelSelectField label {
+  color: $formLabels;
+  display: inline-block;
+  flex: 1 1 50%;
+  font-weight: 400;
+  font-size: 14px;
+}
+.modelSelectField select {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  border-radius: 0;
+  outline-offset: -1px;
+  text-indent: 0;
+  outline: 1px solid $transparent;
+  background-color: $transparent;
+  padding: 0;
+}
+
+.modelSelectField input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: $transparent;
+}
+.modelSelectField select:focus,
+.modelSelectField input:focus {
+  background-color: #ccc;
+  height: 40px;
+  line-height: 40px;
+}
+
+.modelSelectField hr {
+  display: inline-block;
+  flex: 1 1 100%;
+  color: $formLabelBorder;
+  background-color: $formLabelBorder;
+  margin: 0;
+  border: none;
+  height: 1px;
+}
+
+.error,
+.warning {
+  display: inline-block;
+  flex: 1 1 50%;
+  text-align: right;
+  font-size: 12px;
+}
+
+.error {
+  color: $errorColor;
+}
+
+.warning {
+  color: $warningColor;
+}

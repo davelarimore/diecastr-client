@@ -32,10 +32,10 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 ### Front-end
 * React
 * Redux
-* Radium
 * Redux-Form
 * Redux-Thunk
 * React-Router
+* SASS
 * Flexbox
 * JavaScript
 * Adobe XD, Illustrator and Photoshop

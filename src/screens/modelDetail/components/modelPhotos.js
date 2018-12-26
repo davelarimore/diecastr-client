@@ -1,7 +1,7 @@
 import React from 'react';
 import UploadPhotoForm from './uploadPhotoForm';
 
-import './modelPhotos.css';
+import './modelPhotos.scss';
 
 export const ModelPhotos = (props) => {
 

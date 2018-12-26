@@ -1,4 +1,4 @@
- /* Radium would not render these media queries... */
+@import "../../../common/variables.scss";
 
  .authForm {
      font-family: "Lato", sans-serif;
@@ -11,7 +11,7 @@
 
  .formError {
      text-align: center;
-     color: red;
+     color: $errorColor;
      width: 100%;
  }
 
@@ -24,8 +24,8 @@
      text-transform: uppercase;
      font-weight: 700;
      cursor: pointer;
-     color: #FFF;
-     border: '1px solid rgba(0,0,0,0)';
+     color: $buttonBackground;
+     border: 1px solid $transparent;
      border-radius: 8px;
      padding: 7px 25px;
      margin-top: 10px;
@@ -33,14 +33,14 @@
      margin-bottom: 15px;
      margin-left: auto;
      border: none;
-     background-color: #333;
+     background-color: $darkGrey;
  }
 
  .submit:hover {
-     background-color: #1b1464;
+     background-color: lighten($brandColor, 15);
  }
 
- @media screen and (max-width: 420px) {
+ @media screen and (max-width: $breakSmall) {
      authForm {
          max-width: 280px;
      }

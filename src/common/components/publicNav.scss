@@ -1,0 +1,25 @@
+@import "../variables.scss";
+
+.publicNav, .userNav {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        margin: 0 10px;
+    };
+    .navDropDownUl {
+        position: absolute;
+        right: 0;
+        list-style: none;
+        text-align: left;
+        font-size: 16px;
+        background-color: $lightText;
+        padding: 15px;
+        margin: 10px 0 0 0;
+        z-index: 5;
+        width: 150px;
+    };
+    .navDropDownLi {
+        white-space: nowrap;
+        margin: 10px 10px;
+        cursor: pointer;
+    }

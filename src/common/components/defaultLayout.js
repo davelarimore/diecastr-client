@@ -1,11 +1,9 @@
 import React from 'react';
-import Radium from 'radium';
 import { Route } from 'react-router-dom';
 import Header from './header/headerContainer';
 import Footer from './footer';
 import AddModelButton from './addModelButton';
-
-import './defaultLayout.css'
+import './defaultLayout.scss';
 
 export const DefaultLayout = ({ component: Component, ...rest }) => {
     return (
@@ -22,4 +20,4 @@ export const DefaultLayout = ({ component: Component, ...rest }) => {
     )
 };
 
-export default Radium(DefaultLayout);
+export default DefaultLayout;

@@ -1,0 +1,18 @@
+@import "../variables.scss";
+
+.loadingContainer {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 145px;
+        border: none;
+        border-radius: 8px;
+        background-color: $brandColor;
+        z-index: 100;
+        padding: 30px;
+    };

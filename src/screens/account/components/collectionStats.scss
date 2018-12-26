@@ -1,0 +1,38 @@
+@import "../../../common/variables.scss";
+
+h2 {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 10px 0 5px 0;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.stat {
+  width: 29%;
+  background-color: lighten($accentColor, 85);
+  border-radius: 8px;
+  margin: 2%;
+  padding: 20px;
+  @media screen and (max-width: $breakLarge) {
+    width: 96%;
+  }
+  @media screen and (max-width: $breakSmall) {
+    width: 96%;
+  }
+}
+
+.statTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.statValue {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+}

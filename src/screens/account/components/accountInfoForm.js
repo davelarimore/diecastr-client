@@ -1,55 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form';
-import Radium from 'radium';
 import { updateUserData } from '../../../modules/account';
-
-const styles = {
-    input: {
-        height: 40,
-        fontSize: 18,
-        fontWeight: 700,
-        lineHeight: 40,
-        padding: 0,
-        textAlign: 'center',
-        border: 'none',
-        outline: 'none',
-        borderRadius: 4,
-        backgroundColor: '#FFF',
-        margin: '10px 0',
-        ":focus": {
-            backgroundColor: '#CCC',
-            height: 40,
-            lineHeight: 40,
-            outlineOffset: 0,
-        },
-    },
-    button: {
-        fontFamily: "'Lato', sans-serif",
-        fontSize: 12,
-        lineHeight: '26px',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        border: 'none',
-        borderRadius: 4,
-        display: 'inline-block',
-        backgroundColor: '#FFF',
-        padding: '6px 15px',
-        cursor: 'pointer',
-        margin: '10px 10px',
-        ':hover': {
-            color: '#CCC',
-        },
-    },
-    label: {
-        display: 'block',
-    }
-}
+import './accountInfoForm.scss'
 
 const renderField = field => (
     <div>
-        <label style={styles.label} htmlFor={field.label}>User Name</label>
-        <input style={styles.input} {...field.input} id={field.input.name}/>
+        <label className='accountFormLabel' htmlFor={field.label}>User Name</label>
+        <input className='accountFormInput' {...field.input} id={field.input.name}/>
         {field.touched && field.error && <div className="error">{field.error}</div>}
     </div>
 );
@@ -60,7 +18,7 @@ export class AccountInfoFormComponent extends React.Component {
         return (
                 <form onSubmit={handleSubmit}>
                     <Field name="userName" type="text" id='userName' label='userName' component={renderField} />
-                    <button style={styles.button} action="submit">Save changes</button>
+                    <button className='accountFormButton' action="submit">Save changes</button>
                 </form>
         );
     }
@@ -80,4 +38,4 @@ const mapDispatchToProps = dispatch => ({
     onSubmit: values => { dispatch(updateUserData(values)) },
 })
 
-export default Radium(connect(mapStateToProps, mapDispatchToProps)(AccountInfoForm))
+export default connect(mapStateToProps, mapDispatchToProps)(AccountInfoForm)

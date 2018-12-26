@@ -1,0 +1,20 @@
+@import "../../../common/variables.scss";
+
+.toggle {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $lightText;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: $darkGrey;
+  padding: 6px 15px;
+  margin: 5px;
+  cursor: pointer;
+  vertical-align: 2px;
+}
+
+.toggle:hover {
+  background-color: lighten($darkGrey, 15);
+}
