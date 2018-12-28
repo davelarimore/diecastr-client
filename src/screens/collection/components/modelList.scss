@@ -55,8 +55,10 @@
 
 .modelListThumbnail h2 {
     font-size: 16px;
+    font-weight: 700;
     line-height: 1.4em;
-    color: #FFF;
+    text-transform: none;
+    color: $lightText;
     margin: 0;
     padding: 0;
 }

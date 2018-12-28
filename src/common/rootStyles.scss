@@ -13,7 +13,7 @@ body {
   overscroll-behavior-y: none;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
-  background-color: $lightText;
+  background-color: darken($lightText, 5);
   text-align: center;
   line-height: 1.5em;
   min-width: 320px;
@@ -24,9 +24,6 @@ body {
 
 section {
   padding: 20px 0 0 0;
-  @media screen and (max-width: $breakLarge) {
-    padding: 20px 20px 0 20px;
-  }
 }
 
 h1 {
@@ -47,4 +44,11 @@ a {
   font-size: 16px;
   color: $darkText;
   text-decoration: none;
+}
+
+::selection {
+  background: lighten($brandColor, 70); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: lighten($brandColor, 70); /* Gecko Browsers */
 }
