@@ -53,6 +53,9 @@
   margin: 0 15px;
   border-radius: 8px;
   background-color: $buttonBackground;
+  &:hover {
+    background-color: darken($buttonBackground, 15);
+  }
 }
 
 @media screen and (max-width: $breakLarge) {
@@ -68,10 +71,6 @@
     padding: 4px 15px;
     margin: 0 3%;
   }
-}
-
-.heroButton:hover {
-  background-color: darken($buttonBackground, 15);
 }
 
 .heroColumn h2 {
