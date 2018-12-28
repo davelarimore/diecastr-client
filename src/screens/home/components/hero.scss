@@ -53,11 +53,17 @@
   margin: 0 15px;
   border-radius: 8px;
   background-color: $buttonBackground;
-  @media screen and (max-width: $breakLarge) {
+}
+
+@media screen and (max-width: $breakLarge) {
+  .heroButton {
     font-size: 12px;
     padding: 4px 15px;
   }
-  @media screen and (max-width: $breakSmall) {
+}
+
+@media screen and (max-width: $breakSmall) {
+  .heroButton {
     font-size: 12px;
     padding: 4px 15px;
     margin: 0 3%;
