@@ -60,7 +60,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 * Heroku
 * AWS S3
 
-## <a name="install"></a>API Documentation
+## <a name="api"></a>API Documentation
 See [API repo](https://github.com/davelarimore/diecastr-api)
 
 ## <a name="demo"></a>Demo:
