@@ -65,9 +65,9 @@ See [API repo](https://github.com/davelarimore/diecastr-api)
 
 ## <a name="demo"></a>Demo:
 ### Users can access the application at the below URL:
-https://diecastr.herokuapp.com
+https://diecastr.herokuapp.com (allow time for free dyno to spin up)
 
-### Users can create new users in the app or use an existing test user below:
+### Users can create accounts in the app or use an existing test user below:
 
 User: demo@diecastr.io
 
