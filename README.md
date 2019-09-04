@@ -20,7 +20,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 * The Mongo database has separate models for users, models, and collections. The models utilize relationships and middleware to manage ownership of records.
 * Continuous integration including automated tests
 * Images are pre-processed on the back end before being upload to AWS
-* Removed images are also removed from AWS
+* Deleted images are also removed from AWS
 
 ### Future Features:
 * Add model search/filtering across collections
@@ -29,7 +29,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 
 ## <a name="tech"></a>Technology used:
 
-### Front-end
+### Frontend
 * React
 * Redux
 * Redux-Form
@@ -40,7 +40,7 @@ Diecastr allows model collectors to maintain a virtual collection that can be sh
 * JavaScript
 * Adobe XD, Illustrator and Photoshop
 
-### Back-end
+### Backend
 * Node.js
 * Express.js
 * bcryptjs
@@ -65,9 +65,9 @@ See [API repo](https://github.com/davelarimore/diecastr-api)
 
 ## <a name="demo"></a>Demo:
 ### Users can access the application at the below URL:
-https://diecastr.herokuapp.com (allow time for free dyno to spin up)
+https://diecastr.herokuapp.com (please allow time for the server to spin up)
 
-### Users can create accounts in the app or use an existing test user below:
+### Users can create accounts in the app or use an existing test account below:
 
 User: demo@diecastr.io
 
